@@ -1,0 +1,16 @@
+<div ng-controller="ShowController">
+    <a href="#!/dashboard">Home</a> <a href="#!/question/{{ question._id }}/new_answer">Add an answer</a>
+    <h2 ng-bind="question.content"></h2>
+    <h4 ng-bind="question.description"></h4>
+    <ul>
+        <li ng-repeat="answer in question.answers">
+            <div class="leftanswer">
+                <h5 ng-bind="answer._author.name"></h5>
+                <h4 ng-bind="answer.content"></h4>
+                <h5 ng-bind="answer.details"></h5>
+            </div>
+            <h5><span ng-bind="answer.votes"></span> likes</h5>
+            <button type="button" name="Like" ng-click="vote(answer._id)">Like!</button>
+        </li>
+    </ul>
+</div>

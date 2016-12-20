@@ -1,0 +1,9 @@
+<div ng-controller="CreateController">
+    <h1 ng-bind="errors"></h1>
+    <a href="#!/dashboard">Home</a> <a href="#!/question/{{ id }}">Back to Question</a>
+    <form class="answerform" ng-submit="newAnswer()">
+        <label for="answer.content">Answer: <input type="text" ng-model="answer.content"></label><br>
+        <label for="answer.details">Supporting details (optional): <input type="text" ng-model="answer.details"></label><br>
+        <input type="submit" value="Submit Answer">
+    </form>
+</div>

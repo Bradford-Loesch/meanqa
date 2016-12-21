@@ -3,7 +3,7 @@
     <h2 ng-bind="question.content"></h2>
     <h4 ng-bind="question.description"></h4>
     <ul>
-        <li ng-repeat="answer in question.answers">
+        <li ng-repeat="answer in question.answers | orderBy: '-votes'">
             <div class="leftanswer">
                 <h5 ng-bind="answer._author.name"></h5>
                 <h4 ng-bind="answer.content"></h4>
